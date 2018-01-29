@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Tnode
+{
+    int data;
+    struct Tnode *left;
+    struct Tnode *right;
+};
+typedef struct Tnode tree;
+
+
+/*struct node
+{
+    int data;
+    int level;
+    struct node *next;
+}NODE;
+
+
+QNODE create(int ino,int l)
+{
+
+}
+
+*/
+
+tree *createT(int ino)
+{
+    tree *newn=NULL;
+    newn=(tree *)malloc(sizeof(tree));
+    newn->left=NULL;
+    newn->right=NULL;
+    newn->data=ino;
+    return newn;
+}
+
+
+void displayT(root)
+{
+    if(root)
+    {
+        printf("%d ",root->data);
+        displayT(root->left);
+        displayT(root->right);
+    }
+
+}
+
+
+
+void main()
+{
+
+    tree *root=NULL;
+    root=createT(11);
+    displayT(root);
+
+}
